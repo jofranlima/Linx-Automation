@@ -9,7 +9,9 @@ ${matrizEFiliais}               css=a[href*=matriz]
 ${institucionalCarreiras}       css=a[href="/carreira-linx/"]
 ${filialCascavel}               Cascavel/PR 
 ${filialGoiania}                Aparecida de Goiania
-
+${select_id}                    id=greenouse-segments
+${filtroLinxSuporte}             Linx - Suporte
+${filtroTecnologiaEProduto}      Linx - Tecnologia e Produto
 
 ***Keywords***
 New Session                            
@@ -19,6 +21,7 @@ End Session
 Menu institucional
     Element Should Be Visible                ${menuInstitucional}
     Click Element                            ${menuInstitucional}
+Selecionar Matriz e filiais
     Click Element                            ${matrizEFiliais}
 
 
@@ -36,3 +39,18 @@ Verificar filial Goiania
 Voltar pagina
      Go Back
      Sleep        5
+
+Selecionar institucionalCarreiras
+    Click Element    ${institucionalCarreiras}
+
+Filtrar segmento Suporte
+   Element Should Not Be Visible    ${select_id}    ${filtroLinxSuporte}
+
+Verificar se existe segmento Suporte
+   Element Should Not Contain    ${select_id}    ${filtroLinxSuporte}     error=Texto Segmento "${filtroLinxSuporte}" está presente na lista
+
+Filtrar Tecnologia e Produto
+   Select From List By Value    ${select_id}    ${filtroTecnologiaEProduto}
+
+Verificar se filtro foi selecionado
+    Element Should Contain    css=[class="a-title o-work-with-us_subtitle"]    Linx - Tecnologia e Produto
