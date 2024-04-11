@@ -1,90 +1,93 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.10.12 on linux)" generated="2024-04-10T23:35:24.755776" rpa="false" schemaversion="5">
+<robot generator="Robot 7.0 (Python 3.10.12 on linux)" generated="2024-04-11T00:22:35.811428" rpa="false" schemaversion="5">
 <suite id="s1" name="Home" source="/home/jofran/QA/GIT/Pessoais/Linx-Automation/home.robot">
-<test id="s1-t1" name="Cenario 2: Verificar se filial Cascavel está visível" line="12">
+<test id="s1-t1" name=" Cenario 4: Selecionar institucionalCarreiras" line="27">
 <kw name="New Session" owner="base">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-04-10T23:35:24.840267" level="INFO">Opening browser 'chrome' to base url 'https://www.linx.com.br/'.</msg>
+<msg time="2024-04-11T00:22:35.930085" level="INFO">Opening browser 'chrome' to base url 'https://www.linx.com.br/'.</msg>
 <arg>${url}</arg>
 <arg>browser=chrome</arg>
 <arg>options=add_argument("--start-maximized")</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-04-10T23:35:24.840040" elapsed="5.292819"/>
+<status status="PASS" start="2024-04-11T00:22:35.929707" elapsed="5.627673"/>
 </kw>
-<status status="PASS" start="2024-04-10T23:35:24.839482" elapsed="5.293510"/>
+<status status="PASS" start="2024-04-11T00:22:35.928918" elapsed="5.628809"/>
 </kw>
 <kw name="Menu institucional" owner="base">
 <kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2024-04-10T23:35:30.148207" level="INFO">Element 'css=a[data-menu-link="institutional"]' is displayed.</msg>
+<msg time="2024-04-11T00:22:41.572423" level="INFO">Element 'css=a[data-menu-link="institutional"]' is displayed.</msg>
 <arg>${menuInstitucional}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-10T23:35:30.133600" elapsed="0.014723"/>
+<status status="PASS" start="2024-04-11T00:22:41.558662" elapsed="0.013979"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-04-10T23:35:30.148837" level="INFO">Clicking element 'css=a[data-menu-link="institutional"]'.</msg>
+<msg time="2024-04-11T00:22:41.573120" level="INFO">Clicking element 'css=a[data-menu-link="institutional"]'.</msg>
 <arg>${menuInstitucional}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-10T23:35:30.148538" elapsed="0.054325"/>
+<status status="PASS" start="2024-04-11T00:22:41.572853" elapsed="0.059689"/>
 </kw>
+<status status="PASS" start="2024-04-11T00:22:41.558193" elapsed="0.074744"/>
+</kw>
+<kw name="Selecionar institucionalCarreiras" owner="base">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-04-10T23:35:30.203309" level="INFO">Clicking element 'css=a[href*=matriz]'.</msg>
-<arg>${matrizEFiliais}</arg>
+<msg time="2024-04-11T00:22:41.634206" level="INFO">Clicking element 'css=a[href="/carreira-linx/"]'.</msg>
+<arg>${institucionalCarreiras}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-10T23:35:30.203059" elapsed="1.773841"/>
+<status status="PASS" start="2024-04-11T00:22:41.633951" elapsed="2.378754"/>
 </kw>
-<status status="PASS" start="2024-04-10T23:35:30.133243" elapsed="1.843796"/>
+<status status="PASS" start="2024-04-11T00:22:41.633572" elapsed="2.379403"/>
 </kw>
-<kw name="Verificar Matriz e filiais" owner="base">
-<kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2024-04-10T23:35:31.995508" level="INFO">Element 'css=h1' is displayed.</msg>
-<arg>css=h1</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-10T23:35:31.977620" elapsed="0.017973"/>
+<kw name="Filtrar Tecnologia e Produto" owner="base">
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2024-04-11T00:22:44.014129" level="INFO">Selecting options from selection list 'id=greenouse-segments' by value Linx - Tecnologia e Produto.</msg>
+<arg>${select_id}</arg>
+<arg>${filtroTecnologiaEProduto}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2024-04-11T00:22:44.013711" elapsed="0.055931"/>
 </kw>
+<status status="PASS" start="2024-04-11T00:22:44.013328" elapsed="0.056550"/>
+</kw>
+<kw name="Verificar se filtro foi selecionado" owner="base">
 <kw name="Element Should Contain" owner="SeleniumLibrary">
-<msg time="2024-04-10T23:35:32.008073" level="INFO">Element 'css=h1' contains text 'matriz e filiais'.</msg>
-<arg>css=h1</arg>
-<arg>matriz e filiais</arg>
+<msg time="2024-04-11T00:22:44.086931" level="INFO">Element 'css=[class="a-title o-work-with-us_subtitle"]' contains text 'Linx - Tecnologia e Produto'.</msg>
+<arg>css=[class="a-title o-work-with-us_subtitle"]</arg>
+<arg>Linx - Tecnologia e Produto</arg>
 <doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<status status="PASS" start="2024-04-10T23:35:31.995760" elapsed="0.012404"/>
+<status status="PASS" start="2024-04-11T00:22:44.070842" elapsed="0.016347"/>
 </kw>
-<status status="PASS" start="2024-04-10T23:35:31.977265" elapsed="0.031002"/>
+<status status="PASS" start="2024-04-11T00:22:44.070327" elapsed="0.017007"/>
 </kw>
-<kw name="Verificar filial Cascavel" owner="base">
-<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
-<arg>${filialCascavel}</arg>
-<arg>timeout=10s</arg>
-<arg>error=Texto "Filial ${filialCascavel}" não está presente</arg>
-<doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" start="2024-04-10T23:35:32.008671" elapsed="0.007763"/>
+<kw name="Verificar se existe segmento Suporte" owner="base">
+<kw name="Element Should Not Contain" owner="SeleniumLibrary">
+<msg time="2024-04-11T00:22:44.253313" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-04-11T00:22:44.253566" level="FAIL">error=Texto "Segmento Linx - Suporte" está presente na lista"</msg>
+<arg>${select_id}</arg>
+<arg>${filtroLinxSuporte}</arg>
+<arg>error=Texto "Segmento ${filtroLinxSuporte}" está presente na lista"</arg>
+<doc>Verifies that element ``locator`` does not contain text ``expected``.</doc>
+<status status="FAIL" start="2024-04-11T00:22:44.088235" elapsed="0.166302">error=Texto "Segmento Linx - Suporte" está presente na lista"</status>
 </kw>
-<status status="PASS" start="2024-04-10T23:35:32.008456" elapsed="0.008099"/>
+<status status="FAIL" start="2024-04-11T00:22:44.087794" elapsed="0.166985">error=Texto "Segmento Linx - Suporte" está presente na lista"</status>
 </kw>
-<kw name="Voltar pagina" owner="base">
-<kw name="Go Back" owner="SeleniumLibrary">
-<doc>Simulates the user clicking the back button on their browser.</doc>
-<status status="PASS" start="2024-04-10T23:35:32.017245" elapsed="0.016162"/>
+<kw name="End Session" owner="base" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-04-11T00:22:44.255554" elapsed="0.061459"/>
 </kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-04-10T23:35:37.034051" level="INFO">Slept 5 seconds.</msg>
-<arg>5</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-04-10T23:35:32.033620" elapsed="5.000524"/>
+<status status="PASS" start="2024-04-11T00:22:44.255241" elapsed="0.062006"/>
 </kw>
-<status status="PASS" start="2024-04-10T23:35:32.016758" elapsed="5.017471"/>
-</kw>
-<status status="PASS" start="2024-04-10T23:35:24.839066" elapsed="12.195295"/>
+<status status="FAIL" start="2024-04-11T00:22:35.928318" elapsed="8.389213">error=Texto "Segmento Linx - Suporte" está presente na lista"</status>
 </test>
-<status status="PASS" start="2024-04-10T23:35:24.756418" elapsed="12.278255"/>
+<status status="FAIL" start="2024-04-11T00:22:35.813307" elapsed="8.505063"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Home">Home</stat>
+<stat pass="0" fail="1" skip="0" id="s1" name="Home">Home</stat>
 </suite>
 </statistics>
 <errors>
