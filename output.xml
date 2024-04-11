@@ -1,75 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.10.12 on linux)" generated="2024-04-10T23:28:13.098090" rpa="false" schemaversion="5">
+<robot generator="Robot 7.0 (Python 3.10.12 on linux)" generated="2024-04-10T23:35:24.755776" rpa="false" schemaversion="5">
 <suite id="s1" name="Home" source="/home/jofran/QA/GIT/Pessoais/Linx-Automation/home.robot">
 <test id="s1-t1" name="Cenario 2: Verificar se filial Cascavel está visível" line="12">
 <kw name="New Session" owner="base">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-04-10T23:28:13.180461" level="INFO">Opening browser 'chrome' to base url 'https://www.linx.com.br/'.</msg>
+<msg time="2024-04-10T23:35:24.840267" level="INFO">Opening browser 'chrome' to base url 'https://www.linx.com.br/'.</msg>
 <arg>${url}</arg>
 <arg>browser=chrome</arg>
 <arg>options=add_argument("--start-maximized")</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-04-10T23:28:13.180182" elapsed="6.773725"/>
+<status status="PASS" start="2024-04-10T23:35:24.840040" elapsed="5.292819"/>
 </kw>
-<status status="PASS" start="2024-04-10T23:28:13.179647" elapsed="6.774382"/>
+<status status="PASS" start="2024-04-10T23:35:24.839482" elapsed="5.293510"/>
 </kw>
 <kw name="Menu institucional" owner="base">
 <kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2024-04-10T23:28:19.968836" level="INFO">Element 'css=a[data-menu-link="institutional"]' is displayed.</msg>
+<msg time="2024-04-10T23:35:30.148207" level="INFO">Element 'css=a[data-menu-link="institutional"]' is displayed.</msg>
 <arg>${menuInstitucional}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-10T23:28:19.954493" elapsed="0.014439"/>
+<status status="PASS" start="2024-04-10T23:35:30.133600" elapsed="0.014723"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-04-10T23:28:19.969484" level="INFO">Clicking element 'css=a[data-menu-link="institutional"]'.</msg>
+<msg time="2024-04-10T23:35:30.148837" level="INFO">Clicking element 'css=a[data-menu-link="institutional"]'.</msg>
 <arg>${menuInstitucional}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-10T23:28:19.969104" elapsed="0.054576"/>
+<status status="PASS" start="2024-04-10T23:35:30.148538" elapsed="0.054325"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-04-10T23:28:20.024292" level="INFO">Clicking element 'css=a[href*=matriz]'.</msg>
+<msg time="2024-04-10T23:35:30.203309" level="INFO">Clicking element 'css=a[href*=matriz]'.</msg>
 <arg>${matrizEFiliais}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-10T23:28:20.023967" elapsed="1.706550"/>
+<status status="PASS" start="2024-04-10T23:35:30.203059" elapsed="1.773841"/>
 </kw>
-<status status="PASS" start="2024-04-10T23:28:19.954263" elapsed="1.776423"/>
+<status status="PASS" start="2024-04-10T23:35:30.133243" elapsed="1.843796"/>
 </kw>
 <kw name="Verificar Matriz e filiais" owner="base">
 <kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2024-04-10T23:28:21.747338" level="INFO">Element 'css=h1' is displayed.</msg>
+<msg time="2024-04-10T23:35:31.995508" level="INFO">Element 'css=h1' is displayed.</msg>
 <arg>css=h1</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-10T23:28:21.731268" elapsed="0.016194"/>
+<status status="PASS" start="2024-04-10T23:35:31.977620" elapsed="0.017973"/>
 </kw>
 <kw name="Element Should Contain" owner="SeleniumLibrary">
-<msg time="2024-04-10T23:28:21.759925" level="INFO">Element 'css=h1' contains text 'matriz e filiais'.</msg>
+<msg time="2024-04-10T23:35:32.008073" level="INFO">Element 'css=h1' contains text 'matriz e filiais'.</msg>
 <arg>css=h1</arg>
 <arg>matriz e filiais</arg>
 <doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<status status="PASS" start="2024-04-10T23:28:21.747696" elapsed="0.012325"/>
+<status status="PASS" start="2024-04-10T23:35:31.995760" elapsed="0.012404"/>
 </kw>
-<status status="PASS" start="2024-04-10T23:28:21.730973" elapsed="0.029147"/>
+<status status="PASS" start="2024-04-10T23:35:31.977265" elapsed="0.031002"/>
 </kw>
 <kw name="Verificar filial Cascavel" owner="base">
 <kw name="Wait Until Page Contains" owner="SeleniumLibrary">
-<arg>${texto_esperado}</arg>
+<arg>${filialCascavel}</arg>
 <arg>timeout=10s</arg>
-<arg>error=Texto "Filial ${texto_esperado}" não está presente</arg>
+<arg>error=Texto "Filial ${filialCascavel}" não está presente</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" start="2024-04-10T23:28:21.760540" elapsed="0.007378"/>
+<status status="PASS" start="2024-04-10T23:35:32.008671" elapsed="0.007763"/>
 </kw>
-<status status="PASS" start="2024-04-10T23:28:21.760319" elapsed="0.007704"/>
+<status status="PASS" start="2024-04-10T23:35:32.008456" elapsed="0.008099"/>
 </kw>
 <kw name="Voltar pagina" owner="base">
 <kw name="Go Back" owner="SeleniumLibrary">
 <doc>Simulates the user clicking the back button on their browser.</doc>
-<status status="PASS" start="2024-04-10T23:28:21.768413" elapsed="0.028959"/>
+<status status="PASS" start="2024-04-10T23:35:32.017245" elapsed="0.016162"/>
 </kw>
-<status status="PASS" start="2024-04-10T23:28:21.768209" elapsed="0.029375"/>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-04-10T23:35:37.034051" level="INFO">Slept 5 seconds.</msg>
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-04-10T23:35:32.033620" elapsed="5.000524"/>
 </kw>
-<status status="PASS" start="2024-04-10T23:28:13.179226" elapsed="8.618622"/>
+<status status="PASS" start="2024-04-10T23:35:32.016758" elapsed="5.017471"/>
+</kw>
+<status status="PASS" start="2024-04-10T23:35:24.839066" elapsed="12.195295"/>
 </test>
-<status status="PASS" start="2024-04-10T23:28:13.098739" elapsed="8.699620"/>
+<status status="PASS" start="2024-04-10T23:35:24.756418" elapsed="12.278255"/>
 </suite>
 <statistics>
 <total>
