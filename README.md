@@ -7,9 +7,7 @@ Python 3.8+
 
 Robot Framework ++
 
-Browser Library
 
-NodeJS
 ## Instalação
 
 ### Faça download ou clone o repositório em seu terminal com o comando abaixo
