@@ -5,7 +5,7 @@ Este repositório contém scripts de teste automatizados utilizando Robot Framew
 ## Pré-requisitos
 Python 3.8+
 
-Robot Framework ++
+Robot Framework 
 
 
 ## Instalação
