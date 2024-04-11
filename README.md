@@ -26,7 +26,11 @@ cd /home/SeuUsuario/Linx-Automation
  pip install --upgrade robotframework-seleniumlibrary
 
 ```
+### Para executar o projeto use o script
+```bash
+robot -d ./reports ./Tests/home.robot
 
+```
 Verifique se o [robot](https://robotframework.org/) foi instalado com sucesso
 ```bash
 robot --version
