@@ -7,6 +7,9 @@ Python 3.8+
 
 Robot Framework 
 
+## Estrutura
+NO projeto foi utilizado o padrão de page objects de forma a deixar o repositório mais fácil de compreender e realizar manutenção
+
 
 ## Instalação
 
