@@ -1,6 +1,6 @@
 # Linx Automation
 
-Este repositório contém scripts de teste automatizados utilizando Robot Framework e Browser Library para fluxo de teste na página inicial da Linx. O objetivo é fornecer uma suíte de testes eficiente e fácil de manter que possa validar funcionalidades descritas no desafio
+Este repositório contém scripts de teste automatizados utilizando Robot Framework para fluxo de teste na página inicial da Linx. O objetivo é fornecer uma suíte de testes eficiente e fácil de manter que possa validar funcionalidades descritas no desafio
 
 ## Pré-requisitos
 Python 3.8+
