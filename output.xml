@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.10.12 on linux)" generated="2024-04-10T23:28:13.098090" rpa="false" schemaversion="5">
+<suite id="s1" name="Home" source="/home/jofran/QA/GIT/Pessoais/Linx-Automation/home.robot">
+<test id="s1-t1" name="Cenario 2: Verificar se filial Cascavel está visível" line="12">
+<kw name="New Session" owner="base">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-04-10T23:28:13.180461" level="INFO">Opening browser 'chrome' to base url 'https://www.linx.com.br/'.</msg>
+<arg>${url}</arg>
+<arg>browser=chrome</arg>
+<arg>options=add_argument("--start-maximized")</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-04-10T23:28:13.180182" elapsed="6.773725"/>
+</kw>
+<status status="PASS" start="2024-04-10T23:28:13.179647" elapsed="6.774382"/>
+</kw>
+<kw name="Menu institucional" owner="base">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-04-10T23:28:19.968836" level="INFO">Element 'css=a[data-menu-link="institutional"]' is displayed.</msg>
+<arg>${menuInstitucional}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-10T23:28:19.954493" elapsed="0.014439"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-10T23:28:19.969484" level="INFO">Clicking element 'css=a[data-menu-link="institutional"]'.</msg>
+<arg>${menuInstitucional}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-10T23:28:19.969104" elapsed="0.054576"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-10T23:28:20.024292" level="INFO">Clicking element 'css=a[href*=matriz]'.</msg>
+<arg>${matrizEFiliais}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-10T23:28:20.023967" elapsed="1.706550"/>
+</kw>
+<status status="PASS" start="2024-04-10T23:28:19.954263" elapsed="1.776423"/>
+</kw>
+<kw name="Verificar Matriz e filiais" owner="base">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-04-10T23:28:21.747338" level="INFO">Element 'css=h1' is displayed.</msg>
+<arg>css=h1</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-10T23:28:21.731268" elapsed="0.016194"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2024-04-10T23:28:21.759925" level="INFO">Element 'css=h1' contains text 'matriz e filiais'.</msg>
+<arg>css=h1</arg>
+<arg>matriz e filiais</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2024-04-10T23:28:21.747696" elapsed="0.012325"/>
+</kw>
+<status status="PASS" start="2024-04-10T23:28:21.730973" elapsed="0.029147"/>
+</kw>
+<kw name="Verificar filial Cascavel" owner="base">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${texto_esperado}</arg>
+<arg>timeout=10s</arg>
+<arg>error=Texto "Filial ${texto_esperado}" não está presente</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-04-10T23:28:21.760540" elapsed="0.007378"/>
+</kw>
+<status status="PASS" start="2024-04-10T23:28:21.760319" elapsed="0.007704"/>
+</kw>
+<kw name="Voltar pagina" owner="base">
+<kw name="Go Back" owner="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" start="2024-04-10T23:28:21.768413" elapsed="0.028959"/>
+</kw>
+<status status="PASS" start="2024-04-10T23:28:21.768209" elapsed="0.029375"/>
+</kw>
+<status status="PASS" start="2024-04-10T23:28:13.179226" elapsed="8.618622"/>
+</test>
+<status status="PASS" start="2024-04-10T23:28:13.098739" elapsed="8.699620"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Home">Home</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
